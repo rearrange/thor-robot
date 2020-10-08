@@ -1,36 +1,17 @@
 *** Settings ***
-Resource          ../02_Resources/main_resources.robot
-
-*** Test Cases ***
-Check footer links on Home Page
-    Given users go to iPrice Home page
-    When users go to the footers
-    Then users see all footer links are in https
-    [Teardown]    Close All Browsers
-
-Check footer links on Trends page
-    Given users go to iPrice Trends page
-    When users go to the footers
-    Then users see all footer links are in https
-    [Teardown]    Close All Browsers
-
-Check footer links on Coupons page
-    Given users go to iPrice Coupons page
-    When users go to the footers
-    Then users see all footer links are in https
-    [Teardown]    Close All Browsers
+Resource          ../03_Resources/main_resources.robot
 
 *** Keywords ***
 users go to iPrice Home page
-    Open Browser    https://web-cms-iprice-my.iprice.mx
+    Open iPrice Homepage of MY
     Maximize Browser Window
 
 users go to iPrice Trends page
-    Open Browser    https://web-cms-iprice-my.iprice.mx/trends/
+    Open iPrice Blog of MY
     Maximize Browser Window
 
 users go to iPrice Coupons page
-    Open Browser    https://web-cms-iprice-my.iprice.mx/coupons/
+    Open iPrice Coupon of MY
     Maximize Browser Window
 
 users go to the footers
