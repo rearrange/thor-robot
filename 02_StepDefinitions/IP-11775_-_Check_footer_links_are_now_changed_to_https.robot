@@ -20,25 +20,29 @@ users go to the footers
 
 users see all footer links are in https
     # Check About Us link
-    Click Link    About Us
+    Click Element    xpath=//*[@id="ipricegroup"]/ul/li[1]/span
+    Sleep    2s    #sleep to make sure new tab is loaded
     Switch Window    new
     Wait Until Location is not    about:blank
     Location should contain    https://ipricegroup.com
     # Check Contact Us link
     Switch Window    main
-    Click Link    Contact Us
+    Click Element    xpath=//*[@id="ipricegroup"]/ul/li[3]/span
+    Sleep    2s    #sleep to make sure new tab is loaded
     Switch Window    new
     Wait Until Location is not    about:blank
     Location should contain    https://ipricegroup.com/contact.html
     # Check Career Link
     Switch Window    main
-    Click Link    Careers
+    Click Element    xpath=//*[@id="ipricegroup"]/ul/li[4]/span
+    Sleep    2s    #sleep to make sure new tab is loaded
     Switch Window    new
     Wait Until Location is not    about:blank
     Location should contain    https://ipricegroup.com/career.html
     # Check Partners Link
     Switch Window    main
-    Click Link    Partners
+    Click Element    xpath://*[@id="ipricegroup"]/ul/li[5]/span
+    Sleep    2s    #sleep to make sure new tab is loaded
     Switch Window    new
     Wait Until Location is not    about:blank
     Location should contain    https://ipricegroup.com/partner.html
