@@ -4,6 +4,7 @@ Library           BuiltIn
 Resource          PageObject/Homepage.robot
 Resource          PageObject/Coupon.robot
 Resource          PageObject/Blog.robot
+Resource          PageObject/GoRewards.robot
 
 *** Variables ***
 ${BROWSER}        Chrome
@@ -14,3 +15,4 @@ ${IPRICE_PH_PROD}    https://iprice.ph/
 ${IPRICE_ID_PROD}    https://iprice.co.id/
 ${IPRICE_TH_PROD}    https://ipricethailand.com/
 ${IPRICE_VN_PROD}    https://iprice.vn/
+${GOREWARDS_PH_STAGING}     https://gorewards.iprice.ph/
