@@ -50,10 +50,10 @@ webdrivermanager chrome:<version>
 
 - Verify that everything has been installed and work well: 
 ```
-# Should return the following example output: _Robot Framework 4.0.3 (Python 3.9.4 on win32)_
+# Should return the following example output: Robot Framework 4.0.3 (Python 3.9.4 on win32)
 robot --version
 
-# Should return the following example output: _ChromeDriver 91.0.4472.19 (....)_
+# Should return the following example output: ChromeDriver 91.0.4472.19 (....)
 chromedriver --version
 ```
 
@@ -87,7 +87,7 @@ robot -d output 01_TestCases\.
 - **RECOMMENDED:** Running one specific test case in one feature file, with reporting recorded in output folder
 ```
 # '-d output' is to specify output directory. '-t "<testcase name>"' is for specifying test case name. 
-# The syntax for robot command in general: robot <parameter1 e.g. -t> <value for parameter 1> <parameter2 e.g. -d> <value> <test case file or folder> 
+# The syntax for robot command in general: robot <parameter1 e.g. -t> <value1> <parameter2 e.g. -d> <value2> <robot file> 
 
 robot -d output -t "Check footer links on Home Page" 01_TestCases\.
 ```
@@ -99,10 +99,10 @@ Folder and Test Case Structure
 ```bash
 ├── thor-robot #-- project root folder
 │   ├── 01_TestCases #-- folder for all test cases in BDD
-│   │   ├── IP-11775_-_Footer_links_are_now_changed_to_HTTPS.robot #-- filename can be anything, as long as it ended in .robot
+│   │   ├── IP-11775_-_Footer_links_are_now_changed_to_HTTPS.robot #-- filename can be anything but ext in .robot
 │   ├── 02_StepDefinitions #-- folder to hold all step definitions
-│   │   ├── IP-11775_-_Footer_links_are_now_changed_to_HTTPS.robot #-- filename can be anything, as long as it ended in .robot
-│   ├── 03_Resources (folder to contain all resources -- we use PageObject inside here)
+│   │   ├── IP-11775_-_Footer_links_are_now_changed_to_HTTPS.robot #-- filename can be anything ext in .robot
+│   ├── 03_Resources #--(folder to contain all resources -- we use PageObject inside here)
 │   │   ├── PageObject
 │   │       ├── #-- all files that implement PageObject
 │   │       ├── Blog.robot
@@ -113,7 +113,7 @@ Folder and Test Case Structure
 ├── venv #-- virtual environment folder, should not be committed.
 │   ├── Scripts
 │   │   ├── chromedriver.exe #-- web driver file should be created here using webdrivermanager
-└── .gitignore
-└── requirements.txt
+├── .gitignore
+├── requirements.txt
 └── README.md
 ```
